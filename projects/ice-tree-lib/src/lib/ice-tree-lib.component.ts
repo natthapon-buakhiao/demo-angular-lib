@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'lib-ice-tree-lib',
@@ -7,13 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IceTreeLibComponent implements OnInit {
 
+  @Input()
+  nodes = new Array<any>();
   constructor() { }
 
   ngOnInit() {
   }
 
-  alert(){
-    alert('ทดสอบ');
-  }
+  // alert(){
+  //   alert('ทดสอบ');
+  // }
 
 }

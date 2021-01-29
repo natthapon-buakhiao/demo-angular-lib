@@ -4,12 +4,15 @@ import {MatCardModule} from '@angular/material/card';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
+import { TreeComponent } from './tree-view/tree/tree.component';
+import { HeadTreeComponent } from './tree-view/head-tree/head-tree.component';
+import { MasterTreeComponent } from './tree-view/master-tree/master-tree.component';
 
 
 
 @NgModule({
-  declarations: [IceTreeLibComponent],
-  imports: [BrowserModule,BrowserAnimationsModule,MatCardModule,MatButtonModule
+  declarations: [IceTreeLibComponent,   TreeComponent,HeadTreeComponent,MasterTreeComponent],
+  imports: [BrowserModule,BrowserAnimationsModule,MatCardModule,MatButtonModule,
   ],
   exports: [IceTreeLibComponent]
 })
