@@ -2,5 +2,166 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
-  "projects": {}
+  "projects": {
+    "app-ice": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/app-ice",
+      "sourceRoot": "projects/app-ice/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/app-ice",
+            "index": "projects/app-ice/src/index.html",
+            "main": "projects/app-ice/src/main.ts",
+            "polyfills": "projects/app-ice/src/polyfills.ts",
+            "tsConfig": "projects/app-ice/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "projects/app-ice/src/favicon.ico",
+              "projects/app-ice/src/assets"
+            ],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "projects/app-ice/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/app-ice/src/environments/environment.ts",
+                  "with": "projects/app-ice/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "app-ice:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "app-ice:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "app-ice:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/app-ice/src/test.ts",
+            "polyfills": "projects/app-ice/src/polyfills.ts",
+            "tsConfig": "projects/app-ice/tsconfig.spec.json",
+            "karmaConfig": "projects/app-ice/karma.conf.js",
+            "assets": [
+              "projects/app-ice/src/favicon.ico",
+              "projects/app-ice/src/assets"
+            ],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "projects/app-ice/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/app-ice/tsconfig.app.json",
+              "projects/app-ice/tsconfig.spec.json",
+              "projects/app-ice/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/app-ice/e2e/protractor.conf.js",
+            "devServerTarget": "app-ice:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "app-ice:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "ice-tree-lib": {
+      "projectType": "library",
+      "root": "projects/ice-tree-lib",
+      "sourceRoot": "projects/ice-tree-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ice-tree-lib/tsconfig.lib.json",
+            "project": "projects/ice-tree-lib/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ice-tree-lib/src/test.ts",
+            "tsConfig": "projects/ice-tree-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/ice-tree-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ice-tree-lib/tsconfig.lib.json",
+              "projects/ice-tree-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "app-ice"
 }

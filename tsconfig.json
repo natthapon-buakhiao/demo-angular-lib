@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ice-tree-lib": [
+        "dist/ice-tree-lib"
+      ],
+      "ice-tree-lib/*": [
+        "dist/ice-tree-lib/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

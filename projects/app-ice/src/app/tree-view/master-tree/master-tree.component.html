@@ -1,0 +1,23 @@
+<div class="page-main">
+    <section class="content-header">
+        <div class="section-header">
+            <div class="row">
+                <div class="col-6 col-sm-6">
+                    <label style="font-size: 18px;">
+                        tree view
+                    </label>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content">
+        <div class="section-content page-tree">
+            <div class="row">
+                <div class="col-12 col-sm-12">
+                    <app-head-tree [nodes]="nodes" (clickViewChildNode)="viewChildNode($event)" 
+                    (clickHideChildNode)="hideChildNode($event)" ></app-head-tree>
+                </div>
+            </div>
+        </div>
+    </section>
+  </div>

@@ -1,0 +1,18 @@
+<ul class="treeview">
+    <li *ngFor="let node of nodes" class="list-item">
+      <div class="item">
+        <a *ngIf="node.loading" class="toggle"><i class="fa fa-spinner fa-spin"></i></a>
+        <a *ngIf="node.totalChild > 0 && !node.showChild && !node.loading" class="toggle"
+          (click)="viewChildNode(node)">
+          <i class="fa fa-caret-right"></i>
+        </a>
+        <a *ngIf="node.totalChild > 0 && node.showChild && !node.loading" class="toggle"
+          (click)="hideChildNode(node.id)">
+          <i class="fa fa-caret-down"></i>
+        </a>
+        <span class="tree-label">{{node.commodittyName}}</span>
+      </div>
+      <app-tree [nodes]="node.child" *ngIf="node.child && node.showChild" (clickViewChildNode)="viewChildNode($event)"
+      (clickHideChildNode)="hideChildNode($event)"></app-tree>
+    </li>
+  </ul>
