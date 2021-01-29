@@ -8,10 +8,6 @@ import {IceTreeLibModule} from 'ice-tree-lib';
 import { TreeComponent } from './tree-view/tree/tree.component';
 import { HeadTreeComponent } from './tree-view/head-tree/head-tree.component';
 import { MasterTreeComponent } from './tree-view/master-tree/master-tree.component';
-import { CommonModule } from '@angular/common';
-import { MasterTreeRoutingModule } from './tree-view/master-tree/master-tree-routing.module';
-import { ReactiveFormsModule } from '@angular/forms';
-import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -25,10 +21,6 @@ import {MatIconModule} from '@angular/material/icon';
     AppRoutingModule,
     BrowserAnimationsModule,
     IceTreeLibModule,
-    CommonModule,
-    MasterTreeRoutingModule,
-    ReactiveFormsModule,
-    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
