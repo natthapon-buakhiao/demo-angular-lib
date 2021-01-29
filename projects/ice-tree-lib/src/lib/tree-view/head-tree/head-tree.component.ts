@@ -10,6 +10,9 @@ export class HeadTreeComponent implements OnInit {
   @Input()
   nodes: any;
 
+  @Input()
+  tiltleName: string
+
   @Output()
   clickViewChildNode: EventEmitter<number> = new EventEmitter<number>();
 

@@ -9,13 +9,14 @@ export class IceTreeLibComponent implements OnInit {
 
   @Input()
   nodes = new Array<any>();
+    
+  @Input()
+  tiltleName: string;
+
+
   constructor() { }
 
   ngOnInit() {
   }
-
-  // alert(){
-  //   alert('ทดสอบ');
-  // }
 
 }

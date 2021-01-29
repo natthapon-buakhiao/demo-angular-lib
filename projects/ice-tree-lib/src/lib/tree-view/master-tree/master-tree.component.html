@@ -1,5 +1,5 @@
 <div class="page-main">
-    <section class="content-header">
+    <!-- <section class="content-header">
         <div class="section-header">
             <div class="row">
                 <div class="col-6 col-sm-6">
@@ -9,12 +9,12 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <section class="content">
         <div class="section-content page-tree">
             <div class="row">
                 <div class="col-12 col-sm-12">
-                    <app-head-tree [nodes]="nodes" (clickViewChildNode)="viewChildNode($event)" 
+                    <app-head-tree [nodes]="nodes" [tiltleName] = "tiltleName" (clickViewChildNode)="viewChildNode($event)" 
                     (clickHideChildNode)="hideChildNode($event)" ></app-head-tree>
                 </div>
             </div>

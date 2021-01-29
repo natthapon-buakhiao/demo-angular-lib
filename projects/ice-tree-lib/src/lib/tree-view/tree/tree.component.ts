@@ -10,9 +10,6 @@ export class TreeComponent implements OnInit {
   @Input()
   nodes:any;
 
-  @Input()
-  test:[{}];
-
   @Output()
   clickViewChildNode: EventEmitter<number> = new EventEmitter<number>(); 
 

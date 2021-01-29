@@ -2,8 +2,7 @@
     <li class="list-item">
         <div class="item">
             <i class="fa fa-home"></i>
-            <span class="tree-label"><strong>tiltle</strong></span>
-            <!-- <a class="btn btn-box-tool" style="float: right" title="Add child" (click)="onErrorSwal()"><mat-icon>add</mat-icon></a> -->
+            <span class="tree-label"><strong>&nbsp;{{tiltleName}}</strong></span>
         </div>
         <app-tree [nodes]="nodes" (clickViewChildNode)="viewChildNode($event)"
             (clickHideChildNode)="hideChildNode($event)" >
