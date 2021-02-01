@@ -10,7 +10,7 @@
           (click)="hideChildNode(node.id)">
           <i class="fa fa-caret-down"></i>
         </a>
-        <span class="tree-label">{{node.commodittyName}}</span>
+        <span class="tree-label">{{node.name}}</span>
       </div>
       <app-tree [nodes]="node.child" *ngIf="node.child && node.showChild" (clickViewChildNode)="viewChildNode($event)"
       (clickHideChildNode)="hideChildNode($event)"></app-tree>

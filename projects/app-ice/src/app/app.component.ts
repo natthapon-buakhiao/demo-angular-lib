@@ -11,39 +11,39 @@ export class AppComponent {
 
   nodes = [
     {
-    commodittyName: "หมวดอาหาร",
+      name: "หมวดอาหาร",
     id: 1,
     child: [
       {
         id: 11,
         parentId: 1,
-        commodittyName: 'อาหารคาว',
+        name: 'อาหารคาว',
         totalChild: 5,
         child: [
           {
             id: 111,
             parentId: 11,
-            commodittyName: 'แกงจืด'
+            name: 'แกงจืด'
           },
           {
             id: 112,
             parentId: 11,
-            commodittyName: 'ต้มยำ'
+            name: 'ต้มยำ'
           },
           {
             id: 113,
             parentId: 11,
-            commodittyName: 'แกงเผ็ด'
+            name: 'แกงเผ็ด'
           },
           {
             id: 114,
             parentId: 11,
-            commodittyName: 'ต้มโคล้ง'
+            name: 'ต้มโคล้ง'
           },
           {
             id: 115,
             parentId: 11,
-            commodittyName: 'พะแนง'
+            name: 'พะแนง'
           },    
         ]
       },
@@ -51,33 +51,33 @@ export class AppComponent {
       {
         id: 12,
         parentId: 1,
-        commodittyName: 'ขนมหวาน',
+        name: 'ขนมหวาน',
         totalChild: 5,
         child: [
           {
             id: 116,
             parentId: 12,
-            commodittyName: 'ฝอยทอง'
+            name: 'ฝอยทอง'
           },
           {
             id: 117,
             parentId: 12,
-            commodittyName: 'ทองหยอด'
+            name: 'ทองหยอด'
           },
           {
             id: 118,
             parentId: 12,
-            commodittyName: 'ทองหยิบ'
+            name: 'ทองหยิบ'
           },
           {
             id: 119,
             parentId: 12,
-            commodittyName: 'สังขยา'
+            name: 'สังขยา'
           },
           {
             id: 120,
             parentId: 12,
-            commodittyName: 'ขนนชั้น'
+            name: 'ขนนชั้น'
           },    
         ]
       }
@@ -86,75 +86,75 @@ export class AppComponent {
 
   },
   {
-    commodittyName:"เครื่องดื่ม",
+    name:"เครื่องดื่ม",
     id: 2,
     child: [
       {
         id: 13,
         parentId: 2,
-        commodittyName: 'ชา',
+        name: 'ชา',
         totalChild: 5,
         child: [
           {
             id: 121,
             parentId: 13,
-            commodittyName: 'ชาเขียว',
+            name: 'ชาเขียว',
             totalChild: 3,
             child: [
               {
                 id: 1111,
                 parentId: 121,
-                commodittyName: 'ชาเขียวมะนาว'
+                name: 'ชาเขียวมะนาว'
               },
               {
                 id: 1112,
                 parentId: 121,
-                commodittyName: 'ชาเขียวมัทฉะ'
+                name: 'ชาเขียวมัทฉะ'
               },
               {
                 id: 1113,
                 parentId: 121,
-                commodittyName: 'ชาเขียวนมสด'
+                name: 'ชาเขียวนมสด'
               }
             ]
           },
           {
             id: 122,
             parentId: 13,
-            commodittyName: 'ชานม',
+            name: 'ชานม',
             totalChild: 3,
             child: [
               {
                 id: 1114,
                 parentId: 122,
-                commodittyName: 'ชานมใต้หวัน'
+                name: 'ชานมใต้หวัน'
               },
               {
                 id: 1115,
                 parentId: 122,
-                commodittyName: 'ชานมสด+น้ำผึ้ง'
+                name: 'ชานมสด+น้ำผึ้ง'
               },
               {
                 id: 1116,
                 parentId: 122,
-                commodittyName: 'ชานมชมพู'
+                name: 'ชานมชมพู'
               }
             ]
           },
           {
             id: 123,
             parentId: 13,
-            commodittyName: 'ชาแอปเปิล'
+            name: 'ชาแอปเปิล'
           },
           {
             id: 124,
             parentId: 13,
-            commodittyName: 'ชาเบอร์รี่'
+            name: 'ชาเบอร์รี่'
           },
           {
             id: 125,
             parentId: 13,
-            commodittyName: 'ชามะนาว'
+            name: 'ชามะนาว'
           },    
         ]
       },
@@ -162,33 +162,33 @@ export class AppComponent {
       {
         id: 14,
         parentId: 2,
-        commodittyName: 'น้ำอัดลม',
+        name: 'น้ำอัดลม',
         totalChild: 5,
         child: [
           {
             id: 126,
             parentId: 14,
-            commodittyName: 'เป๊ปซี่'
+            name: 'เป๊ปซี่'
           },
           {
             id: 127,
             parentId: 14,
-            commodittyName: 'สไปร์ท'
+            name: 'สไปร์ท'
           },
           {
             id: 128,
             parentId: 14,
-            commodittyName: 'โค๊ก'
+            name: 'โค๊ก'
           },
           {
             id: 129,
             parentId: 14,
-            commodittyName: 'แดงแฟนต้า'
+            name: 'แดงแฟนต้า'
           },
           {
             id: 130,
             parentId: 14,
-            commodittyName: 'เขียวแฟนต้า'
+            name: 'เขียวแฟนต้า'
           },    
         ]
       }
